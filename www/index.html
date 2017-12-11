@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        
+		<title>PhoneGap</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		
+		
+		<!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/> -->
+		
+		<script type="text/javascript" src="scripts/phonegap-1.0.0.js"></script>
+		
+		<!-- <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script> -->
+		<!-- <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script> -->
+		<!-- <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.js"></script> -->
+		
+    </head>
+    <body>
+		<div data-role="header" data-position="inline">
+			<h1>Home</h1>
+		</div>
+		<div class="mypanel"></div>
+		<script>
+			$.getJSON('http://192.168.1.3/wedding/slideshow.php', function(data) {
+        
+        var text = `Date: ${data.image}<br>
+                    Time: ${data.image}<br>
+                    Unix time: ${data.image}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+		</script>
+		
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="demo.html" data-icon="star">Demo</a></li>
+					<li><a href="gallery.html" data-icon="star">Gallery</a></li>
+					<li><a href="contact.html" data-icon="star">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<script src="scripts/jquery-1.11.1.min.js"></script>
+		<script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="scripts/common.js"></script>
+		
+		
+    </body>
+</html>
